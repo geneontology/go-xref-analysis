@@ -5,7 +5,8 @@
 
 The format is
 
-    EC   GO-PARENT    NUM-CHILDREN
+    EC   NUM-CHILDREN EC-NAME
+       GO-PARENT
             GO-CHILD1
             GO-CHILD2
             GO-CHILD3
