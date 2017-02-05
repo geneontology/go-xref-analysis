@@ -122,6 +122,9 @@ redundant_set(S,Z,X,Ys) :-
 
 
 report_redundant_set :-
+        format('EC\tGO\t~n'),
+        fail.
+report_redundant_set :-
         entity_xref(X,Z),
         class(Z,ZN),
         solutions(Y,(subclass(Y,X),
@@ -134,7 +137,7 @@ report_redundant_set :-
         format('\t~w\t~w~n',[X,XN]),
         forall(member(Y,Ys),
                (   class(Y,YN),
-                   format('\t..~w\t..~w~n',[Y,YN]))),
+                   format('\t-- ~w\t-- ~w~n',[Y,YN]))),
         fail.
 
 
